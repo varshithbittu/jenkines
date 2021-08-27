@@ -7,8 +7,7 @@ node{
        }
     stage('Compile-Package-create-War-file'){
      //git maven home path
-   def mvnHome = tool name: 'MAVEN-3', type:'maven'
-   bat "${mvnHome}/bin/mvn package"
+  bat "mvn clean package"
 }
    stage('Deploy to tomcat'){
    bat "copy target\\artifactid.war \"${tomcatWeb}\\artifactid.war \" "
