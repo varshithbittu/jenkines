@@ -3,7 +3,7 @@ node{
    def tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat9.0_bittu\\bin'
    def tomcatStatus = ' '
     stage('SCM checkout'){
-      bat "git clone https://github.com/varshithbittu/jenkines.git"
+       git clone "https://github.com/varshithbittu/jenkines.git"
        }
     stage('Compile-Package-create-War-file'){
      //git maven home path
