@@ -1,7 +1,7 @@
 ---
 - hosts: all
   tasks:
-  - name: ansible create directory example
-    file:
-      path: /ansibleadm/bittu
-      state: directory
+    - name: Transfer file from ServerA to ServerB
+      synchronize:
+        src: /home/ansibleadm/sample.yml
+        dest: /tmp/devops_directory
